@@ -1,0 +1,245 @@
+
+:root{
+    --navColor: #0a428a;
+    --font:"San Francisco";
+    --fontNav:"Times New Roman', Times, serif";
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.wrapper{
+    width: 90%;
+    height: auto;
+    background-color:rgb(251, 251, 251)
+}
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-right: 10px;
+}
+
+.logo{
+    display: flex;
+    justify-content: flex-end;
+    flex: 1 auto;
+}
+
+.navBar{
+    width: 95%;
+    background:var(--navColor);
+    font-family: var(--fontNav);
+    border-radius: 5px;
+    text-align: center; 
+    position:relative;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    height: 80px;
+    padding-top: 20px;
+}
+
+.navLogo img{
+    width: 90px;
+    padding-bottom: 10px;
+}
+
+
+.navList{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.navList li{
+  margin: 0 15px;
+}
+
+.navList a{
+    display: flex;
+    text-decoration: none;
+    position: relative;
+    margin: 10px;
+    padding: 15px;
+    color: rgb(236, 227, 227);
+    font-size: 17px;
+    font-weight:200;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;      
+}
+
+
+.navList a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom:0px;
+    height: 2px;
+    width: 0;
+    background-color: antiquewhite;
+    transition: width 0.3s;
+}
+
+.navList a:hover::after{
+    width: 90%;
+}
+ 
+.section1 {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 80px;
+}
+    
+.section1 img{
+    width: 790px;
+    height: auto;
+}
+
+.section2 {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 3rem; 
+    margin: auto;
+    margin-bottom: 40px;   
+}
+
+.section2-img {
+    grid-column: span 1; 
+}
+
+.section2Text {
+    grid-column: span 1; 
+    word-spacing: 2px;
+    font-size: 16px;
+    color: rgb(30, 29, 29);
+}
+
+h2 {
+    color: rgb(30, 29, 29);
+    word-spacing: 2px;
+    font-size: 22px;
+}
+
+footer {
+    width: 95%;
+    background:var(--navColor);
+    font-family: var(--fontNav);
+    border-radius: 5px;
+    text-align: center; 
+    align-content: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    padding-bottom: 18px;
+}
+
+.icons  {
+    width: 30%;
+    color: rgb(236, 227, 227);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight:bolder;
+    font-size: larger;
+    text-decoration: none; 
+    padding-top: 10px;
+}
+
+.social-icons {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight:bolder;
+    font-size: larger;
+    text-decoration: none;
+    padding-top: 10px;
+}
+
+.social-icons i{
+    color: rgb(236, 227, 227);    
+}
+
+.footerP{
+    font-weight: lighter;
+    font-family:serif;
+    font-size: 15px;
+    color: rgb(239, 239, 239);
+}
+
+@media (max-width: 768px) {
+    .logo{
+        flex: 0;
+        justify-content: flex-start;
+        margin: 50px;
+    }
+
+    header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navBar {
+        flex-direction: row;
+        justify-content: flex-start;
+        justify-content: space-between;
+        height: auto; 
+        width: 90%;
+        margin-bottom: 50px;
+        margin-left: 10px;        
+    }
+
+    .navList {
+        flex-direction: column;
+        gap: 10px; 
+    }
+
+    .section1 img{
+        width: 99%;
+    }
+
+    .icons {
+        flex-direction: column; 
+        align-items: center;
+        justify-items: center;  
+    }
+
+    .social-icons{
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-items: center;  
+    }
+
+ 
+    .section2 {
+        grid-template-columns: 1fr;        
+        white-space: 2px;
+        width: 95%;           
+        padding-left: 10px;
+    }
+     
+    h2 {
+        font-size: 20px;
+    }
+
+    .footerP {
+        font-size: 13px; 
+        white-space: 2px;  
+         
+    }
+
+
+}
+
